@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      //Promise
+      //
+
+      //   var x = 1;
+
+      // 서버 호출해서 데이터 받기
+      // y = callServerData()
+
+      //   var z = x + y; // promise미사용시 에러 , 이유는 y값이 없다.
+
+      var url =
+        "https://1dfec410-8389-42ef-b733-566c37b73b58.mock.pstmn.io/list";
+
+      //promise  미사용
+      //   var data = axios.get(url).then(function (response) {
+      //     console.log(response.data);
+      //     return response.data;
+      //   });
+
+      //promise 사용
+      function getData() {
+        return new Promise(function (resolve, reject) {
+          axios.get(url).then(function (response) {
+            console.log(response.data);
+            resolve(response.data);
+          });
+        });
+      }
+      var total = 0;
+
+      getData().then(function (data) {
+        for (var item of data) {
+          total += item.price;
+        }
+        console.log(total);
+      });
+    </script>
+  </body>
+</html>
