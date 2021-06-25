@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getPerson() {
+        return {
+          firstname: "hong",
+          lastname: "Son",
+          age: 20,
+          email: "son@naver.com",
+          city: "toronto",
+          country: "canada",
+        };
+      }
+
+      //기존 방식
+      var person = getPerson();
+      console.log(person.firstname);
+      console.log(person.lastname);
+
+      //Object Destructring 방식
+      //객체의 원하는 data만 출력
+      var { firstname, lastname } = getPerson();
+      console.log(firstname);
+      console.log(lastname);
+    </script>
+  </body>
+</html>
