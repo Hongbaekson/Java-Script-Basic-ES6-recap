@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var txt = "ABCDEFHIJKLMN";
+
+      console.log(txt.length); // 글자길이
+
+      //indexOf
+      var str = "Please locate where 'locate' ";
+      console.log(str.indexOf("John"));
+
+      if (str.indexOf("locate") > -1) {
+        console.log("locate found");
+        console.log(str.indexOf("locate"));
+      }
+
+      //lastIndex
+      console.log(str.lastIndexOf("locate"));
+
+      console.log(str.search("locate"));
+
+      //slice
+      var str = "Apple, Banana, Kiwi";
+      //   console.log(str.slice(7, 13));
+      //   console.log(str.slice(7));
+      //   console.log(str.slice(-12, -6)); // 역순으로 가져온다.
+
+      //substring
+      console.log(str.substring(7, 13)); // 시작점과 끝 인덱스
+
+      //substr
+      console.log(str.substr(7, 6)); // 시작점과 가져올 글자수
+
+      var birthday = "901030";
+      console.log(birthday.substr(0, 2));
+      console.log(birthday.substr(2, 2));
+      console.log(birthday.substr(4, 2));
+
+      //실무에서 쓰는 방식
+      var birth = "1997-10-30";
+      console.log(birth.substring(0, birth.indexOf("-")));
+
+      //replace
+      //   var str = "Please visit here!";
+      //   var str2 = str.replace("here", "there");
+
+      //   console.log(str2);
+
+      //   var str = "Please visit here here here !";
+      //   var str2 = str.replace("here", "there");
+
+      //   console.log(str2);
+
+      var str = "Please visit here! Here! here!";
+      var str2 = str.replace(/here/gi, "there!");
+
+      console.log(str2);
+
+      //uppercase
+      console.log(str2.toUpperCase());
+
+      //lowercase
+      console.log(str2.toLowerCase());
+
+      //john
+      //JOHN
+      //
+      //데이터 베이스 john, John 두명이 있다면?
+
+      //concat
+      var txt1 = "hello";
+      var txt2 = "World";
+      var txt3 = txt1 + " " + txt2;
+      console.log(txt3);
+
+      //concat 함수 사용 (문자열 결합 )
+      var txt4 = txt1.concat(" ", txt2);
+      console.log(txt4);
+
+      // trim(공백제거 )
+      var str = "                   Hello World       ";
+      console.log(str);
+      console.log(str.trim());
+
+      //padStart => 자리수 정하고 정한 자리수보다 숫자가 숫자가 적을시 원하는 문자로 앞에서부터  채워줌
+      var str = "5";
+      console.log(str.padStart(4, "*"));
+
+      //3  날짜 03일  ,04일등 유용
+      var str = "901030-1";
+      console.log(str.padStart(6, "*"));
+
+      //padEnd
+      console.log(str.padEnd(13, "*"));
+
+      //charAt
+      var str = "Hellow World";
+      console.log(str.charAt(1));
+
+      //split
+      var tags = "키보드,기계식,블루트스";
+      var arr = tags.split(",");
+      console.log(arr);
+
+      var birthday = "1997-10-30";
+      var arr1 = birthday.split("-");
+      console.log(arr1);
+    </script>
+  </body>
+</html>

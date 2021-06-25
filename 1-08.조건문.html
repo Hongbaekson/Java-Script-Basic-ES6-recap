@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //if , swith
+
+      //   var age = 17;
+      //   var isAdult = false;
+
+      //   //if(조건){
+      //   //수행코드
+      //   //}
+      //   if (age > 18) {
+      //     isAdult = true;
+      //     console.log("당신은 성인입니다.");
+      //   } else {
+      //     console.log("당신은 미성년자 입니다.");
+      //   }
+
+      //   var hour = 14;
+      //   if (hour < 10) {
+      //     console.log("굿모닝");
+      //   } else if (hour < 18) {
+      //     console.log("굿애프터눈");
+      //   } else if (hour < 21) {
+      //     console.log("굿이브닝");
+      //   } else {
+      //     console.log("굿나이트");
+      //   }
+
+      //if else
+
+      //switch
+
+      var d = new Date();
+      var day = d.getDay();
+      //   console.log(day);
+      var dayName = "";
+
+      switch (day) {
+        case 4:
+          dayName = "목요일";
+          break;
+        case 1:
+          dayName = "월요일";
+          break;
+        case 2:
+          dayName = "화요일";
+          break;
+
+        default:
+          dayName = "";
+          break;
+      }
+
+      console.log(dayName);
+    </script>
+  </body>
+</html>
