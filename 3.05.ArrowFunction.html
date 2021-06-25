@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //방식 1
+      function hello() {
+        console.log("hello hi?");
+        return "hello hi";
+      }
+      hello();
+
+      //방식 2
+      var hello = function () {
+        console.log("hello hi2");
+        return "hello hi2";
+      };
+
+      //방식 3 arrow func
+      var hello = () => {
+        console.log("hello hi3!!");
+        return "hello hi3!!!";
+      };
+
+      //   var hello = () => "hello world";
+
+      var hello = (firstName, lastName) =>
+        "hello " + firstName + " " + lastName;
+
+      console.log(hello("Hong", "Son")); // 결과 : hello Hong Son
+    </script>
+  </body>
+</html>
