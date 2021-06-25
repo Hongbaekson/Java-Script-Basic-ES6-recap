@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Object Literals Syntax Extension
+
+      var firstname = "hong";
+      var lastname = "back";
+
+      var person = {
+        firstname: firstname,
+        lastname: lastname,
+      };
+
+      var type = "student";
+      var type2 = "score";
+
+      var score = {
+        // student: "john",
+        [type]: "john", // 위의 코드와 같다.
+        // score: 95,
+        [type2]: 95, // 위의 코드와 같다.
+      };
+
+      //   score.grade = 1;
+
+      var type3 = "grade";
+      score[type3] = 1;
+
+      console.log(score);
+      console.log(score.student);
+      console.log(score.score);
+      console.log(score.grade);
+    </script>
+  </body>
+</html>
