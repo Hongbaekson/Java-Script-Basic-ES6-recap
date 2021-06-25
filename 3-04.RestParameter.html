@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function sum(x1, x2) {
+      //     var y = x1 + x2;
+      //     console.log(y);
+
+      //     return y;
+      //   }
+
+      //   sum(5, 7);
+
+      //   function sum(x1, x2, x3) {
+      //     var y = x1 + x2 + x3;
+      //     console.log(y);
+
+      //     return y;
+      //   }
+      //   sum(5, 7, 3);
+
+      //restParameter -> 몇개의 매개변수가 들어올지 모를때 사용하는 기법 ES6
+      function sum(...args) {
+        var total = 0;
+        // for (var x of args) {
+        //   total += x;
+        // }
+
+        args.forEach(function (x, index) {
+          console.log(index);
+          total += x;
+        });
+        console.log(total);
+        return total;
+      }
+
+      sum(3, 2, 5, 7, 4, 23);
+      //   sum(3, 2);
+      //   sum(3);
+    </script>
+  </body>
+</html>
