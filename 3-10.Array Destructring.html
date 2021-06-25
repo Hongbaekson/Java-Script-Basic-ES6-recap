@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Array Destructring
+
+      function getScores() {
+        return [70, 80, 90];
+      }
+      //기존방식
+      var scores = getScores();
+      console.log(scores);
+      console.log(scores[0]);
+
+      //Array Destructring 문법  ES6
+      //   var [x, y, z] = getScores();
+      //   console.log(x);
+      //   console.log(y);
+      //   console.log(z);
+
+      //위도 , 경도
+      function getLocation() {
+        return [123.12, 23.023];
+      }
+
+      var [lat, long] = getLocation();
+      console.log(lat);
+      console.log(long);
+    </script>
+  </body>
+</html>
