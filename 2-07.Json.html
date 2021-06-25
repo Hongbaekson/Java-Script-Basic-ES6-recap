@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //JSON
+      //json 서버로 부터 웹페이지로 데이털르 전송할 때 자주 사용 .
+      // 웹페이지에서 서버로 데이터를 전송할 때도 json 포맷 사용
+      //json - Java Script Object Notation
+
+      var data = {
+        employees: [
+          {
+            firstname: "Hong",
+            lastname: "Son",
+          },
+          {
+            firstname: "winter",
+            lastname: "Son",
+          },
+          {
+            firstname: "summer",
+            lastname: "Son",
+          },
+        ],
+      };
+
+      //Json.stringify
+      console.log(data); // Object type
+      console.log(JSON.stringify(data)); //String type
+
+      //Json.parse
+
+      //   for (var i in data) {
+      //     console.log(data[i]);
+      //   }
+    </script>
+  </body>
+</html>

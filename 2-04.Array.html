@@ -147,7 +147,7 @@
         // }
         // 위의 조건문 의 simple 코드
         // return a.point > b.point ? 1 : a.point < b.point ? -1 : 0; // 오름차순
-        return a.point > b.point ? -1 : a.point < b.point ? 1 : 0; // 내림차순
+        return a.point < b.point ? -1 : a.point > b.point ? 1 : 0; // 내림차순
       });
       console.log(persons);
 
