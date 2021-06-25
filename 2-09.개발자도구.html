@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //개발단계에서 나눠서 사용 , 운영단계는 X
+      console.log("Hello World");
+      console.info("Hello World"); // 정보
+      console.warn("Hello World"); // 경고
+      console.error("Hello World"); // 에러
+
+      var userList = [
+        { firstname: "홍백", lastname: "손", email: "son@naver.com" },
+        { firstname: "구디", lastname: "박", email: "park@naver.com" },
+        { firstname: "지디", lastname: "이", email: "GD@naver.com" },
+        { firstname: "석진", lastname: "김", email: "kim@naver.com" },
+      ];
+
+      //   console.log(userList);
+      console.table(userList); // 테이블 형식으로 보여줌
+
+      //   function a(){
+
+      //       console.time();
+
+      //       console.timeEnd();
+
+      //   }
+
+      console.time();
+
+      console.timeEnd();
+
+      //콘솔로그메시지 자체에서 스타일 주는 방법
+      //사실 플젝 구현하는동안 한번도 써본적없다.
+      console.log(
+        "this is %cstyle message",
+        "color:yellow;background-color:blue"
+      );
+    </script>
+  </body>
+</html>
