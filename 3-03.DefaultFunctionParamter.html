@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function say(message) {
+      //     console.log(message);
+      //   }
+
+      //default 파라미터가 적용 안됬을때 코딩  하던  형식
+      //   function say(message) {
+      //     if (message != undefined) {
+      //       console.log(message);
+      //     } else {
+      //       console.log("no parameter");
+      //     }
+      //   }
+
+      //default 펑션 파라미터 방식 ES6
+      function say(message = "no parameter") {
+        console.log(message);
+      }
+
+      say("hi?");
+      say(); // no paramter 출력 , default 파라미터
+
+      //ES6 - EcmaScript 6버전
+
+      function plus(x, y = 1) {
+        console.log(x + y);
+      }
+      plus(4); // y값을 할당 안해주어도 defalult param이 1이기 때문에 5출력
+    </script>
+  </body>
+</html>

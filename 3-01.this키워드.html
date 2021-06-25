@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="this.style.backgroundColor='red'">전송</button>
+    <button onclick="callFunc(this);">클릭</button>
+    <select name="" id="" onchange="changeSelect(this);">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <script>
+      //   console.log(window);
+      console.log(this);
+
+      function fullName() {}
+
+      var person = {
+        firstname: "Hong",
+        lastname: "Son",
+        fullName: function () {
+          return this.firstname.concat(this.lastname);
+        },
+      };
+
+      console.log(person.fullName());
+
+      function myFunc() {
+        console.log(this);
+      }
+
+      myFunc();
+
+      function callFunc(x) {
+        console.log(x); // this 객체 가져오기
+      }
+
+      function changeSelect(y) {
+        console.log(y.value); // this객체의 value 값
+      }
+    </script>
+  </body>
+</html>
