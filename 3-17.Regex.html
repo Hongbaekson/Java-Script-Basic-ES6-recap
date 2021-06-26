@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //정규식 (Regualr Expression)
+
+      var patt = /World/i; // World - 패턴 , i - modifier
+
+      var str = "Hello World! world!";
+
+      console.log(str.search("world")); // -1 대소문자 X
+
+      console.log(str.search(/World/i)); // i = 대소문자 구분
+
+      console.log(str.replace("World", "Hong")); // Hello Hong!
+      console.log(str.replace("world", "Hong")); //  대입불가 대소문자 , Hello World!
+      //g 글로벌 - 전부 다 바꾼다 .
+      console.log(str.replace(/world/gi, "Hong")); //  정규식/ hello Hong! Hong!
+
+      var str = "Is this all there is ";
+      var patt1 = /[hat]/g; //[abc] -> abc다 찾는다
+      var result = str.match(patt1);
+      console.log(result); // t h a t h 찾음
+
+      //[0-9] -> 0부터 9까지  ==== \d
+      var str = "123abcdcs45233ddd";
+      var patt1 = /[0-9]/g;
+      var result = str.match(patt1);
+      console.log(result); // 1 2 3 4 5 2 3 3
+
+      //(red|green)
+      var str = "re, green, red, gen, red, blue, yellow";
+      var patt1 = /(red|green)/g; // red랑 green만 찾는다
+      var result = str.match(patt1);
+      console.log(result); // green red red
+
+      // \d 숫자 [0-9]
+      // \s 공백
+      var str = "Give 100";
+      var patt1 = /\d/g;
+      var result = str.match(patt1);
+      console.log(result); // 1 0 0
+
+      // \b -> 시작이 특정 단어로 시작하는 단어를 찾는다
+      var str = "HELLO, LOOK AT ME!";
+      var patt1 = /\bLO/g;
+      var result = str.search(patt1);
+      console.log(result); // 7  HELLO 무시 , LO로 시작하는 LOOK찾음
+
+      //n+  -> 최소한 1개이상 있어야한다.
+
+      var str = "Hellooo";
+      var patt1 = /o+/g;
+      console.log(str.match(patt1)); // ooo
+
+      //n* 0 혹은 n개
+      var str = "Hellooo World";
+      var patt1 = /lo*/g;
+      console.log(str.match(patt1)); // l  looo  l
+
+      //n? 0개 이거나 1개
+      var str = "1, 100 or 1000";
+      var patt1 = /10?/g;
+      console.log(str.match(patt1)); // 1  10  10
+
+      //우편번호 5자리
+      // 32543
+      // ^ 시작 지정
+      // $ 끝 지정
+      var patt1 = /^\d{5}$/;
+      var code = "23452";
+      console.log(patt1.test(code));
+
+      //전화번호
+      //010-2322-3231
+
+      var patt1 = /^(010)-\d{4}-\d{4}$/;
+      var tele = "010-2321-2323";
+      console.log(patt1.test(tele));
+
+      //이메일 체크
+      //thesdf.123@naver.com
+      //thexafs.go@naver.co.kr
+      var patt1 = /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/;
+      console.log(patt1.test("thesdf.123@naver.com"));
+    </script>
+  </body>
+</html>
