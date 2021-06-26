@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- 저장된 모든 함수를 모두 호출한다. -->
+    <!-- <script src="scripts/3-13.moudule.js" type="module"></script> -->
+
+    <script type="module">
+      //모듈화 하여 필요한 함수만 호출하여 사용한다.
+      //export 화 한 함수만 import를 사용하여 불러온다.
+      import { log, error, PI } from "scripts/3-13.moudule.js";
+
+      log("안녕?");
+      log(PI);
+      error("에러야");
+    </script>
+
+    <script src="scripts/3-13.ref.js" type="module"></script>
+    <script></script>
+  </body>
+</html>
