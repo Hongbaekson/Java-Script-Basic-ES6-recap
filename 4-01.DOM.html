@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Text:
+    <br />
+    <input type="text" id="text1" value="ABC" />
+    <br />
+    관심사:
+    <br />
+    <label>
+      <input type="checkbox" name="chk_interest" value="it" /> IT/컴퓨터</label
+    >
+    <label>
+      <input type="checkbox" name="chk_interest" value="entertainment" />
+      엔터테인먼트</label
+    >
+    <label>
+      <input type="checkbox" name="chk_interest" value="sports" /> 스포츠</label
+    >
+    <label>
+      <input type="checkbox" name="chk_interest" value="shoping" /> 쇼핑</label
+    >
+    <label>
+      <input type="checkbox" name="chk_interest" value="book" /> 도서/책</label
+    >
+    <br />
+    Radio:
+    <br />
+    <label>
+      <input type="radio" name="radio_email_yn" value="Y" checked /> 동의</label
+    >
+    <label> <input type="radio" name="radio_email_yn" value="N" /> 거부</label>
+    <br />
+    Select:
+    <br />
+    <select id="select1">
+      <option value="KO">Korea</option>
+      <option value="CN">China</option>
+      <option value="JP">Japan</option>
+    </select>
+    <br />
+    <button onclick="Save();">저장</button>
+
+    <div id="hong">hongeee</div>
+    <script>
+      function Save() {
+        console.log("저장 ");
+        //.value 사용하여 값 변경
+        document.getElementById("text1").value = "1231231";
+
+        //id로 가져오기
+        var oText1 = document.getElementById("text1");
+        console.log(oText1.value);
+
+        //querySelector
+        // var oText2 = document.querySelector("#text1");
+        // console.log(oText2);
+
+        //name으로 가져오기
+        var oCheckbox = document.getElementsByName("chk_interest");
+        console.log(oCheckbox);
+
+        for (var i = 0; i < oCheckbox.length; i++) {
+          if (oCheckbox[i].checked) {
+            console.log(oCheckbox[i].value);
+          }
+        }
+
+        //querySelectAll
+        var oCheckbox2 = document.querySelectorAll(
+          "[name=chk_interest]:checked"
+        );
+
+        console.log(oCheckbox2);
+
+        var oRadio = document.querySelector("[name=radio_email_yn]:checked");
+        console.log(oRadio);
+
+        var oselect = document.getElementById("select1");
+        console.log(oselect.value);
+
+        console.log(document.getElementById("hong").innerText);
+      }
+    </script>
+  </body>
+</html>
