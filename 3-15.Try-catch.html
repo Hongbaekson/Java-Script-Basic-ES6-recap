@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      try {
+        consol.log("log메시지 "); // 에러 e  뺌
+      } catch (err) {
+        console.log(err.name);
+        console.log(err.message);
+      }
+
+      console.log("정상 완료");
+
+      var x = "";
+      try {
+        if (x == "") throw "empty"; // throw 를 통한 강제 err
+
+        var y = x + 3;
+      } catch (err) {
+        console.log(`x is ${err}`);
+      } finally {
+        console.log("try/catch문 finally 실행 "); // 에러 유무 상관 X
+      }
+    </script>
+  </body>
+</html>
