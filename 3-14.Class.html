@@ -8,7 +8,7 @@
       //Class
       //객체를 생성하기 위한 일종의 틀 , 설계도 변수와 메소드를 정의하는
       class Car {
-        constructor(modelName, modelYear, type, price) {
+        constructor(modelName, modelYear, type, price = 2000) {
           this.modelName = modelName;
           this.modelYear = modelYear;
           this.type = type;
@@ -32,7 +32,7 @@
           this.price = price;
         }
       }
-      let car = new Car("ionic", "2021", "e", 4000);
+      let car = new Car("ionic", "2021", "e");
       console.log(car.getModelName());
       console.log(car.getModelYear());
       console.log(car.getPrice());
