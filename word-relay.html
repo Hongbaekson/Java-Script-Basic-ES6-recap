@@ -11,7 +11,6 @@
     <div>제시어 : <span id="word"></span></div>
     <input type="text" />
     <button class="hello">입력</button>
-    <button class="db">더블클릭</button>
     <script>
       //이벤트 리스너 함수
 
@@ -27,33 +26,25 @@
 
       //함수
       const onClickButton = () => {
-        if (!word) {
+        if (!word || word[word.length - 1] === newWord[0]) {
           //empty
           word = newWord; // 입력한 단어가 제시어가 된다
           $word.textContent = word; // 화면에 제시어 표시
           const order = Number($order.textContent); // 1번째
 
           if (order + 1 > number) {
-            order.textContent = 1;
+            $order.textContent = 1;
           } else {
-            order.textContent = order + 1;
+            $order.textContent = order + 1;
           }
         } else {
           //is not empty
-          if (word[word.length - 1] === newWord[0]) {
-            // 끝말잇기 단어 확인
-            word = newWord;
-            $word.textContent = word;
-            const order = Number($order.textContent);
-            if (order + 1 > number) {
-              order.textContent = 1;
-            } else {
-              order.textContent = order + 1;
-            }
-          } else {
-          }
+          alert("wrong word!!");
         }
+        $input.value = "";
+        $input.focus();
       };
+
       const onInput = (event) => {
         newWord = event.target.value; // 입력하는 단어가 현재 단어
       };
